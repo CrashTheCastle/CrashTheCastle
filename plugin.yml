@@ -1,7 +1,7 @@
 name: CrashTheCastle
 main: me.PureIndianSkillz.CrashTheCastle.CrashTheCastle
 version: 1.0
-description: CrashTheCastleDev
+description: CrashTheCastleDevRavi
 commands:
   start:
     description: Start the game!
