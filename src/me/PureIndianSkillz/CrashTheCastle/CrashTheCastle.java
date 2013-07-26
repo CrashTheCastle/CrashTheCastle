@@ -36,7 +36,9 @@ public class CrashTheCastle extends JavaPlugin {
 	    Player player = (Player) sender;
 	    //start a game//
 		if(commandLabel.equalsIgnoreCase("start")){
+			//send message
 			player.sendMessage(ChatColor.RED + "The Plugin is still in devolpment!!!!");
+			//set extra health bars
 			player.setMaxHealth(100);
 			return true;
 			}
