@@ -9,3 +9,6 @@ commands:
   resethealth:
     description: Over 9000!
     usage: /resethealth
+  class:
+    description: Over 9000!
+    usage: /class

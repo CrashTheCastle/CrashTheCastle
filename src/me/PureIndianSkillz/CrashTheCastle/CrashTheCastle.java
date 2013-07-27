@@ -1,5 +1,7 @@
 package me.PureIndianSkillz.CrashTheCastle;
 
+
+
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
@@ -31,7 +33,7 @@ public class CrashTheCastle extends JavaPlugin {
 	public void onEnable(){
 		PluginDescriptionFile pdfFile = this.getDescription();
 		CrashTheCastle.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " CrashTheCastle Has been Enabled");
-		
+
 	}public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	    Player player = (Player) sender;
 	    //start a game//
@@ -40,15 +42,16 @@ public class CrashTheCastle extends JavaPlugin {
 			player.sendMessage(ChatColor.RED + "The Plugin is still in devolpment!!!!");
 			//set extra health bars
 			player.setMaxHealth(100);
-			return true;
-			}
+		}
 			
-		if (cmd.getName().equalsIgnoreCase("resethealth"))
-		{
+		else if (commandLabel.equalsIgnoreCase("resethealth")){
+			//sets max health back to 20			
 			player.setMaxHealth(20);
-		}	
+						player.sendMessage(ChatColor.GREEN + "Enjoy your new health");
+			}	
+
 			
-			
+		
 	    
 			
 
