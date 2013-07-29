@@ -19,19 +19,24 @@ public class SignListener implements Listener{
 		Player player = sign.getPlayer();
 		if(sign.getLine(1).equalsIgnoreCase("knight")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Knight");
-			sign.setLine(1, (ChatColor.GREEN+"Knight Class"));}
+			sign.setLine(1, (ChatColor.GREEN+"Knight"));
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}
 		if(sign.getLine(1).equalsIgnoreCase("archer")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Archer");
-			sign.setLine(1, (ChatColor.GREEN+"Archer Class"));}
+			sign.setLine(1, (ChatColor.GREEN+"Archer"));
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}
 		if(sign.getLine(1).equalsIgnoreCase("wizard")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Wizard");
-			sign.setLine(1, (ChatColor.GREEN+"Wizard Class"));}	
+			sign.setLine(1, (ChatColor.GREEN+"Wizard"));
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}	
 		if(sign.getLine(1).equalsIgnoreCase("farmer")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Farmer");
-			sign.setLine(1, (ChatColor.GREEN+"Farmer Class"));}
+			sign.setLine(1, (ChatColor.GREEN+"Farmer"));
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}
 		if(sign.getLine(1).equalsIgnoreCase("bowman")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Bowman");
-			sign.setLine(1, (ChatColor.GREEN+"Bowman Class"));}					
+			sign.setLine(1, (ChatColor.GREEN+"Bowman"));
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}					
 		if(sign.getLine(1).equalsIgnoreCase("alchemist")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Alchemist");
 			sign.setLine(1, (ChatColor.GREEN+"Alchemist"));
