@@ -37,6 +37,7 @@ public class CrashTheCastle extends JavaPlugin {
 		PluginDescriptionFile pdfFile = this.getDescription();
 		CrashTheCastle.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " CrashTheCastle Has been Enabled");
 		new SignListener(this);
+		new PlayerListener(this);
 
 	}public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	    Player player = (Player) sender;

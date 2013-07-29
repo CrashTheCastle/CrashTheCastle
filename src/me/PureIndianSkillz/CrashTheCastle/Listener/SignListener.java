@@ -1,7 +1,9 @@
 package me.PureIndianSkillz.CrashTheCastle.Listener;
 
 import org.bukkit.ChatColor;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
@@ -40,6 +42,12 @@ public class SignListener implements Listener{
 		if(sign.getLine(1).equalsIgnoreCase("alchemist")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Alchemist");
 			sign.setLine(1, (ChatColor.GREEN+"Alchemist"));
-			sign.setLine(2, (ChatColor.GREEN+"Class"));}	
+			sign.setLine(2, (ChatColor.GREEN+"Class"));
+			
+			}
+		
+		
+		}	
+		
 }
-	}
+	
