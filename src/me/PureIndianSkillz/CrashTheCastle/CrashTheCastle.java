@@ -4,7 +4,9 @@ package me.PureIndianSkillz.CrashTheCastle;
 
 import java.util.logging.Logger;
 
+import me.PureIndianSkillz.CrashTheCastle.Listener.PlayerListener;
 import me.PureIndianSkillz.CrashTheCastle.Listener.SignListener;
+
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -38,6 +40,7 @@ public class CrashTheCastle extends JavaPlugin {
 		CrashTheCastle.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " CrashTheCastle Has been Enabled");
 		new SignListener(this);
 		new PlayerListener(this);
+		
 
 	}public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	    Player player = (Player) sender;
