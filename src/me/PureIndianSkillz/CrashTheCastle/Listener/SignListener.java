@@ -1,12 +1,15 @@
 package me.PureIndianSkillz.CrashTheCastle.Listener;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.SignChangeEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SignListener implements Listener{
@@ -17,8 +20,10 @@ public class SignListener implements Listener{
 	
 	@EventHandler	
 	
-	public void onSignCreate(SignChangeEvent sign){
+	public void onSignCreate(SignChangeEvent sign)
+	{
 		Player player = sign.getPlayer();
+		
 		if(sign.getLine(1).equalsIgnoreCase("knight")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Knight");
 			sign.setLine(1, (ChatColor.GREEN+"Knight"));
@@ -42,12 +47,24 @@ public class SignListener implements Listener{
 		if(sign.getLine(1).equalsIgnoreCase("alchemist")){
 			player.sendMessage(ChatColor.GREEN + "You made a pick class sign:Alchemist");
 			sign.setLine(1, (ChatColor.GREEN+"Alchemist"));
-			sign.setLine(2, (ChatColor.GREEN+"Class"));
-			
-			}
+			sign.setLine(2, (ChatColor.GREEN+"Class"));}
+		if(sign.getLine(1).equalsIgnoreCase("castle")){
+			player.sendMessage(ChatColor.GREEN + "You made a pick side sign: castle");
+			sign.setLine(1, (ChatColor.GREEN+"Choose Side:"));
+			sign.setLine(2, (ChatColor.RED+"CASTLE"));}
+		if(sign.getLine(1).equalsIgnoreCase("village")){
+			player.sendMessage(ChatColor.GREEN + "You made a pick side sign: village");
+			sign.setLine(1, (ChatColor.GREEN+"Choose Side:"));
+			sign.setLine(2, (ChatColor.RED+"VILLAGE"));}
 		
 		
 		}	
+	
+			
 		
-}
+	}
+    	
+
+
+
 	

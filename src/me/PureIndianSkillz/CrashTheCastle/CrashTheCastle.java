@@ -42,28 +42,15 @@ public class CrashTheCastle extends JavaPlugin {
 		new PlayerListener(this);
 		
 
-	}public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	    Player player = (Player) sender;
 	    //start a game//
-		if(commandLabel.equalsIgnoreCase("start")){
-			//send message
-			player.sendMessage(ChatColor.RED + "The Plugin is still in devolpment!!!!");
-			//set extra health bars
-			player.setMaxHealth(100);
-		}
-			
-		else if (commandLabel.equalsIgnoreCase("resethealth")){
-			//sets max health back to 20			
-			player.setMaxHealth(20);
-						player.sendMessage(ChatColor.GREEN + "Enjoy your new health");
-			}	
-
-			
-		
-	    
-			
-
- return true;
-	}
-
-}
+	   if (commandLabel.equalsIgnoreCase("start")){
+	        for (Player p : Bukkit.getOnlinePlayers()) {
+	            p.teleport(p.getWorld().getSpawnLocation());}
+	    }
+	return true;
+	
+}}
