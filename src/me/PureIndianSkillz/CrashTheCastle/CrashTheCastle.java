@@ -6,11 +6,12 @@ import java.util.logging.Logger;
 
 import me.PureIndianSkillz.CrashTheCastle.Listener.PlayerListener;
 import me.PureIndianSkillz.CrashTheCastle.Listener.SignListener;
-
+import me.PureIndianSkillz.CrashTheCastle.Locations;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -51,6 +52,15 @@ public class CrashTheCastle extends JavaPlugin {
 	        for (Player p : Bukkit.getOnlinePlayers()) {
 	            p.teleport(p.getWorld().getSpawnLocation());}
 	    }
+	   else if(commandLabel.equalsIgnoreCase("setteamspawn")){
+		   Location loc = player.getLocation();
+		
+		   Locations.saveLoc(loc, "team village");
+	   }
+	   		
+	   
+	   
+	   
 	return true;
 	
 }}
