@@ -62,5 +62,5 @@ public class CrashTheCastle extends JavaPlugin {
 	   
 	   
 	return true;
-	
+	Project Renamed To Toxic Havoc
 }}
